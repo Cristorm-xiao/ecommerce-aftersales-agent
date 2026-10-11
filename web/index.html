@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153e35">
+  <title>星云售后 · 让每一次购买安心落地</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script type="module" src="/assets/app.mjs?v=2"></script>
+</head>
+<body>
+  <svg class="icon-defs" aria-hidden="true"><defs>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="m6 12 12 0m-5-5 5 5-5 5"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8" cy="8" r="1.5"/><path d="m4 18 5-5 4 4 3-6 5 7"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m3 7 9-4 9 4v10l-9 4-9-4V7Zm0 0 9 4 9-4M12 11v10M7 5l10 4"/></symbol>
+    <symbol id="i-return" viewBox="0 0 24 24"><path d="M7 8h8a6 6 0 0 1 0 12h-3M7 8l4-4M7 8l4 4"/></symbol>
+    <symbol id="i-support" viewBox="0 0 24 24"><path d="M5 13v-2a7 7 0 0 1 14 0v2M19 17v2l-6 2"/><rect x="3" y="11" width="4" height="7" rx="2"/><rect x="17" y="11" width="4" height="7" rx="2"/></symbol>
+  </defs></svg>
+  <div class="workspace">
+    <aside class="sidebar">
+      <a class="brand" href="/" aria-label="星云售后首页"><span class="brand-mark">✳</span><span>星云<span class="brand-sub">AFTERCARE</span></span></a>
+      <button class="new-chat" id="new-chat"><svg><use href="#i-plus"/></svg>新建会话<span>↗</span></button>
+      <div class="sidebar-label">你的服务空间</div>
+      <div class="active-space"><span class="space-dot"></span>售后咨询<span class="count" id="message-count">0</span></div>
+      <div class="sidebar-note">从一张订单开始，<br>把问题一步步解决。</div>
+      <div class="sidebar-bottom"><span class="store-symbol">云</span><div>星云数码演示店<small>键盘 · 鼠标 · 充电器</small></div></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div><span class="eyebrow">CUSTOMER CARE</span><h1>售后服务台</h1></div><span class="connection" id="connection"><span></span>连接中</span></header>
+      <section class="conversation" id="conversation" aria-label="售后对话">
+        <div class="welcome" id="welcome">
+          <div class="welcome-emblem">✳</div><span class="eyebrow">我们在这里，为你处理</span>
+          <h2>把售后，<br>交给我们。</h2>
+          <p>查物流、了解退货条件，或说说商品遇到的问题。<br>有订单号的话，一起告诉我就好。</p>
+          <div class="suggestions">
+            <button data-query="请查询 DEMO1003 的物流。"><svg><use href="#i-box"/></svg><strong>我的包裹到哪了？</strong><span>查询 DEMO1003 物流 <b>↗</b></span></button>
+            <button data-query="DEMO1001 我想退货，请帮我判断是否符合条件。"><svg><use href="#i-return"/></svg><strong>这件商品可以退吗？</strong><span>了解退货条件 <b>↗</b></span></button>
+            <button data-query="DEMO1002 鼠标无法开机，我想申请质量问题售后。"><svg><use href="#i-support"/></svg><strong>商品遇到了问题</strong><span>登记质量问题 <b>↗</b></span></button>
+          </div>
+          <div class="welcome-foot"><span>01</span>先描述问题，我们会继续询问需要的信息。</div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite" aria-relevant="additions"></div>
+      </section>
+      <div class="composer-area">
+        <div class="notice" id="notice" role="status" hidden></div>
+        <div class="attachment" id="attachment" hidden><img id="attachment-preview" alt="待发送的商品图片"><div><strong id="attachment-name"></strong><small>图片将用于辅助描述商品情况</small></div><button id="remove-image" aria-label="移除图片">×</button></div>
+        <form id="chat-form" class="composer">
+          <label class="sr-only" for="query">输入售后问题</label><textarea id="query" rows="1" maxlength="6000" placeholder="描述你的问题，或输入订单号…"></textarea>
+          <div class="composer-actions"><button class="upload-button" type="button" id="upload-button" aria-label="上传商品图片"><svg><use href="#i-image"/></svg><span>添加图片</span></button><span class="keyboard-hint">Enter 发送 · Shift + Enter 换行</span><button class="send-button" id="send-button" type="submit" aria-label="发送消息"><svg><use href="#i-arrow"/></svg></button></div>
+        </form>
+        <input id="image-input" type="file" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+        <footer>演示店铺 · 使用模拟订单，不执行真实退款<span>图片可作参考，售后结论以审核为准</span></footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

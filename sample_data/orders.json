@@ -1,0 +1,8 @@
+[
+  {"order_id": "DEMO1001", "product": "星云机械键盘 K1", "amount": 199.0, "status": "delivered", "delivered_at": "2026-10-06", "supports_no_reason": true, "logistics": "2026-10-06 已签收，演示物流 DEMO-SF1001"},
+  {"order_id": "DEMO1002", "product": "星云无线鼠标 M1", "amount": 89.0, "status": "delivered", "delivered_at": "2026-09-25", "supports_no_reason": true, "logistics": "2026-09-25 已签收，演示物流 DEMO-SF1002"},
+  {"order_id": "DEMO1003", "product": "星云充电器 C1", "amount": 69.0, "status": "shipped", "delivered_at": null, "supports_no_reason": true, "logistics": "2026-10-11 运输中，预计 2026-10-12 送达，演示物流 DEMO-SF1003"},
+  {"order_id": "DEMO1004", "product": "个性定制键帽", "amount": 129.0, "status": "delivered", "delivered_at": "2026-10-09", "supports_no_reason": false, "logistics": "2026-10-09 已签收，演示物流 DEMO-SF1004"},
+  {"order_id": "DEMO1005", "product": "星云有线鼠标 M2", "amount": 59.0, "status": "delivered", "delivered_at": "2026-10-04", "supports_no_reason": true, "logistics": "2026-10-04 已签收，第七天边界订单"},
+  {"order_id": "DEMO1006", "product": "星云键盘 K2", "amount": 159.0, "status": "delivered", "delivered_at": "2026-10-03", "supports_no_reason": true, "logistics": "2026-10-03 已签收，第八天边界订单"}
+]
